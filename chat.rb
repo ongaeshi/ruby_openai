@@ -1,7 +1,7 @@
 require "ruby_openai"
 require "readline"
 
-token = File.read(".token")
+token = File.read(File.join(__FILE__, "../.token"))
 client = OpenAI::Client.new(access_token: token)
 
 loop do 
