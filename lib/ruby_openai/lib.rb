@@ -1,0 +1,2 @@
+module RubyOpenai
+end
