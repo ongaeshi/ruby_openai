@@ -58,13 +58,13 @@ def generate_common_game_asset(thema, data)
 end
 
 generate_common_game_asset(
-  "Halloween",
+  "Age of Exploration",
   [
-    {kind: "player1", description: "Cute Ghost"},
-    {kind: "enemy1", description: "Scary Pumpkin"},
-    {kind: "weapon1", description: "Fireball"},
-    {kind: "item1", description: "Lucky Coin"},
+    {kind: "player1", description: "Cute Pirate Girl"},
+    {kind: "enemy1", description: "Sneaky skeletons"},
+    {kind: "weapon1", description: "Lightning flying sideways"},
+    {kind: "item1", description: "A delightful treasure"},
     {kind: "tile1", description: "Brick wall"},
-    {kind: "background1", description: "Night Pumpkin's dark castle"}    
+    {kind: "background1", description: "Bright pirate ship on the sea"}    
   ]
 )
