@@ -2,3 +2,4 @@
 /.runa/*
 !/.runa/.gitkeep
 /.token
+/output/
