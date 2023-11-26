@@ -31,9 +31,9 @@ def generate_common_game_asset(thema, data)
   timestamp = Time.now.strftime("%Y%m%d%H%M%S")
   data.each do |d|
     response = generate_image(
-      "dall-e-3",
+      "dall-e-2",
       "Use pixel art to represent the single #{d[:kind]} in a '#{thema}' themed game as '#{d[:description]}'. Create the background with black. Square. From side to right. Use larger pixel dots.",
-      "1024x1024"
+      "256x256"
     )
     url = response.dig("data", 0, "url")
     name = "#{d[:kind]}_#{timestamp}.png"
