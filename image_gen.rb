@@ -36,6 +36,12 @@ def generate_common_game_asset(thema, data)
         "Use pixel art to represent the #{d[:kind]} in a '#{thema}' themed game as '#{d[:description]}'. 16x9. Use larger pixel dots. Color scheme that does not interfere with game play.",
         "1792x1024"
       )
+    elsif d[:kind] =~ /tile/
+      generate_image(
+        "dall-e-2",
+        "Use pixel art to represent the tilemap block in a '#{thema}' themed game as '#{d[:description]}'. Square. From side to right. Use larger pixel dots.",
+        "256x256"
+      )
     else
       generate_image(
         "dall-e-2",
@@ -46,19 +52,19 @@ def generate_common_game_asset(thema, data)
     url = response.dig("data", 0, "url")
     name = "#{d[:kind]}_#{timestamp}.png"
     path = File.join($output_dir, name)
-    puts "Save to #{path}"
     download_image(url, path)
+    puts "Save to #{path}"
   end
 end
 
 generate_common_game_asset(
   "Halloween",
   [
-    # {kind: "player1", description: "Cute Ghost"},
-    # {kind: "enemy1", description: "Scary Pumpkin"},
-    # {kind: "weapon1", description: "Fireball"},
-    # {kind: "item1", description: "Lucky Coin"},
-    # {kind: "tile1", description: "Brick tile"},
-    {kind: "background1", description: "Halloween Party"}    
+    {kind: "player1", description: "Cute Ghost"},
+    {kind: "enemy1", description: "Scary Pumpkin"},
+    {kind: "weapon1", description: "Fireball"},
+    {kind: "item1", description: "Lucky Coin"},
+    {kind: "tile1", description: "Brick wall"},
+    {kind: "background1", description: "Night Pumpkin's dark castle"}    
   ]
 )
