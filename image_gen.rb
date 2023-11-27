@@ -38,9 +38,9 @@ def generate_common_game_asset(thema, data)
       )
     elsif d[:kind] =~ /tile/
       generate_image(
-        "dall-e-2",
-        "Use pixel art to represent the tilemap block in a '#{thema}' themed game as '#{d[:description]}'. Square. From side to right. Use larger pixel dots.",
-        "256x256"
+        "dall-e-3",
+        "Use pixel art to represent squared tilemap materials that can be used in game engines in a '#{thema}' themed game as '#{d[:description]}'.",
+        "1024x1024"
       )
     else
       generate_image(
@@ -64,7 +64,7 @@ generate_common_game_asset(
     {kind: "enemy1", description: "Sneaky skeletons"},
     {kind: "weapon1", description: "Lightning flying sideways"},
     {kind: "item1", description: "A delightful treasure"},
-    {kind: "tile1", description: "Brick wall"},
-    {kind: "background1", description: "Bright pirate ship on the sea"}    
+    {kind: "tile1", description: "Wood"},
+    {kind: "background1", description: "Bar"}    
   ]
 )
