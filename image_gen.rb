@@ -44,9 +44,9 @@ def generate_common_game_asset(thema, data)
       )
     else
       generate_image(
-        "dall-e-2",
-        "Use pixel art to represent the single #{d[:kind]} in a '#{thema}' themed game as '#{d[:description]}'. Create the background with black. Square. From side to right. Use larger pixel dots.",
-        "256x256"
+        "dall-e-3",
+        "Use pixel art to represent squared tilemap materials that can be used in game engines in a '#{thema}' themed game as '#{d[:description]}'. Multiple patterns of full-body shots of the same size from the side in a square can be arranged horizontally and vertically.",
+        "1024x1024"
       )
     end
     url = response.dig("data", 0, "url")
@@ -58,13 +58,13 @@ def generate_common_game_asset(thema, data)
 end
 
 generate_common_game_asset(
-  "Age of Exploration",
+  "Halloween",
   [
-    {kind: "player1", description: "Cute Pirate Girl"},
-    {kind: "enemy1", description: "Sneaky skeletons"},
-    {kind: "weapon1", description: "Lightning flying sideways"},
-    {kind: "item1", description: "A delightful treasure"},
-    {kind: "tile1", description: "Wood"},
-    {kind: "background1", description: "Bar"}    
-  ]
+    {kind: "player1", description: "Cute Ghost"},
+    {kind: "enemy1", description: "Scary Pumpkin"},
+    {kind: "weapon1", description: "Fireball"},
+    {kind: "item1", description: "Lucky Coin"},
+    {kind: "tile1", description: "Brick wall"},
+    {kind: "background1", description: "Night Pumpkin's dark castle"}  
+ ]
 )
