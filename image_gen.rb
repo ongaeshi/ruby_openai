@@ -33,7 +33,7 @@ def generate_common_game_asset(thema, data)
     response = if d[:kind] =~ /background/
       generate_image(
         "dall-e-3",
-        "Use pixel art to represent the #{d[:kind]} in a '#{thema}' themed game as '#{d[:description]}'. 16x9. Use larger pixel dots. Color scheme that does not interfere with game play.",
+        "Use pixel art to represent the #{d[:kind]} in a '#{thema}' themed game as '#{d[:description]}'. 16x9. Use larger pixel dots. Color scheme that does not interfere with game play. Since it is the background, lower the contrast.",
         "1792x1024"
       )
     elsif d[:kind] =~ /tile/
